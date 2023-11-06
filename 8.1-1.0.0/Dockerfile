@@ -1,4 +1,5 @@
-FROM php:7.3-fpm
+#V1.0.0
+FROM php:8.1-fpm
 
 ENV PHP_UPLOAD_MAX_FILESIZE=32M
 ENV PHP_POST_MAX_SIZE=32M
@@ -32,12 +33,12 @@ RUN apt-get update && apt-get install -y \
 #php-ext pgsql
     libpq-dev
 
-RUN docker-php-ext-configure gd --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include/ \
+RUN docker-php-ext-configure gd --enable-gd --with-webp --with-jpeg \
     && docker-php-ext-configure exif \
     && docker-php-ext-configure intl \
     && docker-php-ext-install gd exif intl mysqli pdo_mysql zip pgsql pdo_pgsql
 
-RUN pecl install xdebug-3.1.6 \
+RUN pecl install xdebug-3.2.0 \
     && docker-php-ext-enable xdebug
 
 COPY xdebug.ini $PHP_INI_DIR/conf.d/xdebug.ini
@@ -47,7 +48,7 @@ RUN usermod -u 1000 www-data
 
 COPY --from=composer/composer:2.5.1-bin /composer /usr/bin/composer
 
-COPY --from=wordpress:cli-2-php7.3 /usr/local/bin/wp /usr/local/bin/wp
+COPY --from=wordpress:cli-2.7.1-php8.1 /usr/local/bin/wp /usr/local/bin/wp
 
 RUN mkdir -p /var/www/.composer \
     && chown www-data:www-data /var/www/.composer
