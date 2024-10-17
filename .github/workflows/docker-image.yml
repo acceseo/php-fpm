@@ -25,10 +25,6 @@ jobs:
             ${{ matrix.version }}/**
             .github/**
       -
-        name: Find the image version
-        run: |
-          echo "DOCKER_IMAGE_VERSION=$(grep 'LABEL org.opencontainers.image.version=' ${{ matrix.version }}/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
-      -
         name: Set up QEMU
         if: steps.changed-files.outputs.any_changed == 'true'
         uses: docker/setup-qemu-action@v2
@@ -53,11 +49,10 @@ jobs:
           platforms: 'amd64,arm64'
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}-${{ env.DOCKER_IMAGE_VERSION }}
       - name: Notify container release
         if: github.ref == 'refs/heads/main' && steps.changed-files.outputs.any_changed == 'true'
         uses: fjogeleit/http-request-action@v1
         with:
           url: '${{ secrets.ZAPIER_WEBHOOK }}'
           method: 'POST'
-          data: '{"message": "🐳📦🐘 Imagen ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}-${{ env.DOCKER_IMAGE_VERSION }} disponible en Docker Hub."}'
+          data: '{"message": "🐳📦🐘 Imagen ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }} disponible en Docker Hub."}'
