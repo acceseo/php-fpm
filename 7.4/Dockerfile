@@ -2,7 +2,6 @@ FROM php:7.4.33-fpm
 
 LABEL org.opencontainers.image.title="PHP-FPM"
 LABEL org.opencontainers.image.description="Opinionated PHP-FPM container for development"
-LABEL org.opencontainers.image.version=1.0.0
 LABEL org.opencontainers.image.authors="acceseo Projects S.L."
 LABEL org.opencontainers.image.url="https://github.com/acceseo/php-fpm"
 LABEL org.opencontainers.image.licenses="MIT License"

@@ -27,8 +27,6 @@ Imagen que tiene como base la oficial de PHP en su implementación FPM.
 * 8.2
 * 8.3
 
-*Es posible utilizar una versión con formato [semver](https://semver.org/). Por ejemplo acceseo/php-fpm:8.1-1.0.0.*
-
 ## 🔨 Qué contiene la imagen
 * [composer](https://getcomposer.org/)
 * [wp cli](https://wp-cli.org/)
