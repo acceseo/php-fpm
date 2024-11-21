@@ -50,10 +50,8 @@ COPY xdebug.ini $PHP_INI_DIR/conf.d/xdebug.ini
 COPY php.ini $PHP_INI_DIR/php.ini
 
 RUN usermod -u 1000 www-data
+RUN chown www-data ~www-data
 
 COPY --from=composer/composer:2.5.1-bin /composer /usr/bin/composer
 
 COPY --from=wordpress:cli-2.7.1-php8.2 /usr/local/bin/wp /usr/local/bin/wp
-
-RUN mkdir -p /var/www/.composer \
-    && chown www-data:www-data /var/www/.composer
