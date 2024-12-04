@@ -93,7 +93,7 @@ Xdebug
 * Max input vars:
   `PHP_MAX_INPUT_VARS=50000`
 * Memory limit:
-  `PHP_MEMORY_LIMIT=128M`
+  `PHP_MEMORY_LIMIT=256M`
 * Max execution time:
   `PHP_MAX_EXECUTION_TIME=30`
 * Max input time:

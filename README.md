@@ -93,7 +93,7 @@ Xdebug
 * Cantidad de variables de entrada máximas:
   `PHP_MAX_INPUT_VARS=50000`
 * Límite de memoria de ejecución:
-  `PHP_MEMORY_LIMIT=128M`
+  `PHP_MEMORY_LIMIT=256M`
 * Tiempo máximo de ejecución:
   `PHP_MAX_EXECUTION_TIME=30`
 * Tiempo máximo de lectura de datos de entrada:
