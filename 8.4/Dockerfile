@@ -1,5 +1,3 @@
-FROM composer/composer:2.5.1-bin AS composer
-
 FROM php:8.4.1-fpm
 
 LABEL org.opencontainers.image.title="PHP-FPM"
@@ -54,6 +52,6 @@ COPY php.ini $PHP_INI_DIR/php.ini
 RUN usermod -u 1000 www-data
 RUN chown www-data ~www-data
 
-COPY --from=composer /composer /usr/bin/composer
+COPY --from=composer/composer:2.8.3-bin /composer /usr/bin/composer
 
 COPY --from=wordpress:cli-2.9.0-php8.3 /usr/local/bin/wp /usr/local/bin/wp
