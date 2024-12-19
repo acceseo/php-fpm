@@ -58,4 +58,4 @@ RUN chown www-data ~www-data
 
 COPY --from=composer /composer /usr/bin/composer
 
-COPY --from=wordpress:wp-cli /usr/local/bin/wp /usr/local/bin/wp
+COPY --from=wp-cli /usr/local/bin/wp /usr/local/bin/wp
