@@ -1,5 +1,7 @@
 FROM composer/composer:2.8.4-bin AS composer
 
+FROM wordpress:cli-2.9.0 AS wp-cli
+
 FROM php:8.3.14-fpm
 
 LABEL org.opencontainers.image.title="PHP-FPM"
@@ -56,4 +58,4 @@ RUN chown www-data ~www-data
 
 COPY --from=composer /composer /usr/bin/composer
 
-COPY --from=wordpress:cli-2.9.0-php8.3 /usr/local/bin/wp /usr/local/bin/wp
+COPY --from=wp-cli /usr/local/bin/wp /usr/local/bin/wp
