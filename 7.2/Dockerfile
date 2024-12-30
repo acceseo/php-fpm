@@ -1,6 +1,6 @@
 FROM composer/composer:2.8.4-bin AS composer
 
-FROM wordpress:cli-2.9.0 AS wp-cli
+FROM wordpress:cli-2.11.0 AS wp-cli
 
 FROM php:7.2.34-fpm
 
