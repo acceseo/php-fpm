@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: "docker"
     schedule:
       interval: "daily"
-    directory: "/"
+    directories:
+      - "/*"
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
