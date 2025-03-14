@@ -54,6 +54,6 @@ jobs:
         uses: SimonScholz/google-chat-action@main
         with:
             webhookUrl: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
-            title: "🐳📦🐘 Imagen ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}"
+            title: "🐳📦🐘 ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}"
             subtitle: "Nueva imagen disponible en Docker Hub."
             createDefaultSection: false
