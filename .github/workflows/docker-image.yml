@@ -51,8 +51,9 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}
       - name: Notify container release
         if: github.ref == 'refs/heads/main' && steps.changed-files.outputs.any_changed == 'true'
-        uses: fjogeleit/http-request-action@v1
+        uses: SimonScholz/google-chat-action@main
         with:
-          url: '${{ secrets.ZAPIER_WEBHOOK }}'
-          method: 'POST'
-          data: '{"message": "🐳📦🐘 Imagen ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }} disponible en Docker Hub."}'
+            webhookUrl: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
+            title: "🐳📦🐘 Imagen ${{ secrets.DOCKERHUB_USERNAME }}/php-fpm:${{ matrix.version }}"
+            subtitle: "Nueva imagen disponible en Docker Hub."
+            createDefaultSection: false
