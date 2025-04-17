@@ -1,4 +1,4 @@
-FROM composer/composer:2.8.6-bin AS composer
+FROM composer/composer:2.8.8-bin AS composer
 
 FROM wordpress:cli-2.11.0 AS wp-cli
 
