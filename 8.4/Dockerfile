@@ -2,7 +2,7 @@ FROM composer/composer:2.8.8-bin AS composer
 
 FROM wordpress:cli-2.11.0 AS wp-cli
 
-FROM php:8.4.5-fpm
+FROM php:8.4.6-fpm
 
 LABEL org.opencontainers.image.title="PHP-FPM"
 LABEL org.opencontainers.image.description="Opinionated PHP-FPM container for development"
