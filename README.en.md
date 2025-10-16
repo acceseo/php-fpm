@@ -26,6 +26,7 @@ Image based on the official PHP image in its FPM implementation.
 * 8.1
 * 8.2
 * 8.3
+* 8.4
 
 ## 🔨 What's in the image
 * [composer](https://getcomposer.org/)
