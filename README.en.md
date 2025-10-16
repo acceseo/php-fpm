@@ -18,9 +18,9 @@
 
 Image based on the official PHP image in its FPM implementation.
 
-## 🧰 Currently supported versions
-* 7.2
-* 7.3
+## 🧰 Available versions
+* 7.2 🧟 EOL
+* 7.3 🧟 EOL
 * 7.4
 * 8.0
 * 8.1

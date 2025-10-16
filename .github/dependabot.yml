@@ -4,7 +4,8 @@ updates:
     schedule:
       interval: "daily"
     directories:
-      - "/*"
+      - "/7.4"
+      - "/8.*"
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
