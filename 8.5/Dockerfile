@@ -2,7 +2,7 @@ FROM composer/composer:2.9.2-bin AS composer
 
 FROM wordpress:cli-2.12.0 AS wp-cli
 
-FROM ghcr.io/php/pie:1.3.2-bin AS pie
+FROM ghcr.io/php/pie:1.3.3-bin AS pie
 
 FROM php:8.5.0-fpm
 
