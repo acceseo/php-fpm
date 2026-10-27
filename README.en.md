@@ -21,7 +21,7 @@ Image based on the official PHP image in its FPM implementation.
 ## 🧰 Available versions
 * 7.2 🧟 EOL
 * 7.3 🧟 EOL
-* 7.4
+* 7.4 🧟 EOL
 * 8.0
 * 8.1
 * 8.2

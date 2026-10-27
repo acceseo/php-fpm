@@ -4,7 +4,6 @@ updates:
     schedule:
       interval: "daily"
     directories:
-      - "/7.4"
       - "/8.*"
     ignore:
       - dependency-name: "php"
