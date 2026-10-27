@@ -23,7 +23,7 @@ Imagen que tiene como base la oficial de PHP en su implementación FPM.
 * 7.3 🧟 EOL
 * 7.4 🧟 EOL
 * 8.0 🧟 EOL
-* 8.1
+* 8.1 🧟 EOL
 * 8.2
 * 8.3
 * 8.4
