@@ -4,7 +4,7 @@ FROM wordpress:cli-2.12.0 AS wp-cli
 
 FROM ghcr.io/php/pie:1.5.5-bin AS pie
 
-FROM php:8.5.12-fpm
+FROM php:8.5.13RC1-fpm
 
 LABEL org.opencontainers.image.title="PHP-FPM"
 LABEL org.opencontainers.image.description="Opinionated PHP-FPM container for development"
