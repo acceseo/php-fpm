@@ -28,6 +28,7 @@ Imagen que tiene como base la oficial de PHP en su implementación FPM.
 * 8.3
 * 8.4
 * 8.5
+* 8.6
 
 ## 🔨 Qué contiene la imagen
 * [composer](https://getcomposer.org/)
